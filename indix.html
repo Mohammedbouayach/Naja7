@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+    body{
+      text-align: center;
+      background:black;
+      background-position: right;
+     
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(8px);
+      
+      
+    }
+    @media (min-width: 768px){
+      .con{
+        width: 750px;
+      }
+    }
+    @media (min-width: 992px){
+      .con{
+        width: 970px;
+      }
+    }
+    @media (min-width: 1200px){
+      .con{
+        width: 1170px;
+      }
+    }
+
+    .title a{
+     color: #085816;
+     letter-spacing: 0.5px;
+     font-size: 22px;
+     text-decoration: none;
+     border-bottom: 1px solid #085816;
+    
+     border-width: 8px;
+    
+    }
+    .content{
+        margin-top: 10%;
+    }
+    
+    .cycle p{
+      color: greenyellow;
+      font-size: 18px;
+    }
+    
+    .cycle input{
+      outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      padding: 4px;
+      text-align: center;
+      margin-top: 4%;
+      background: none;
+      color: green;
+      font-size: 20px;
+    }
+    
+    input:focus{
+      border: solid 2px  #63C54C;
+    }
+    
+    button{
+      padding: 4px;
+      border: none;
+      background: green;
+      width: 120px;
+      margin-top: 7%;
+      border-radius: 8px;
+      font-size: 18px;
+      color: #222;
+    }
+    button:active{
+      
+      background: #63C54C;
+    }
+    .result{
+      font-size: 22px;
+      color: whitesmoke;
+      margin-top: 20px;
+      background: green;
+     
+    }
+    .service{
+      margin-top: 120px;
+    }
+    .barr{
+    background:black;
+    width: 60%;
+    height: 4px;
+    margin-bottom: 2px;
+    margin-top: 3px;
+    margin-left: 20px;
+    
+  }
+  .bar{
+    background:black;
+    width: 45%;
+    height: 4px;
+    margin-bottom: 2px;
+    margin-top: 3px;
+    margin-left: 20px;
+    transition: 0.3s;
+  }
+  .bar:hover{
+    width: 60%;
+  }
+  .header{ position: sticky;
+  top: 0;
+    display: flex;
+    justify-content: space-between;
+    background:white;
+    height: 40px;
+    
+  }
+  .header h3 {
+    margin-right: 12px;
+    color: #085816;
+    border-bottom: 1px solid #085816;
+    height: 30px;
+    border-width: 4px;
+  
+  }
+  .icon{
+    transition: 0.7s;
+  }
+  .icon ul{
+    list-style:none ;
+    position: absolute;
+    left: 20px;
+    background: whitesmoke;
+   width: 200px;
+   height: 160px;
+   border-radius: 13%;
+   display: none;
+   transition: 0.7s;
+  }
+  .icon ul li{
+    margin-top: 10px;
+  text-align: right;
+  transition: 0.6s;
+
+  }
+  .icon ul li:hover{
+    padding-right: 15px;
+  }
+  
+  .icon ul li a{
+    text-decoration: none;
+    color: #085816;
+    
+  }
+  .icon ul li:not(:last-child) {
+    border-bottom: 1px solid #085816;
+  }
+  .icon:hover ul{
+    display: block;
+   
+  }
+  .bac{
+    margin-top: 60px;
+  }
+  .bac a{ color: #085816;
+     letter-spacing: 0.5px;
+     font-size: 22px;
+     text-decoration: none;
+     border-bottom: 1px solid #085816;
+    
+     border-width: 8px;
+    
+  }
+  .math{
+    display: flex;
+    margin-left:80px;
+    margin-top: 50px;
+  }
+  .math p{
+    color: greenyellow;
+      font-size: 18px;
+      margin-left: 5px;
+  }
+  .math input{
+    outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      text-align: center;
+      background: none;
+      color: green;
+      margin-right: px;
+  }
+  .pc{
+    display: flex;
+    margin-left:80px;
+    margin-top: 20px;
+  }
+  .pc p{
+    color: greenyellow;
+      font-size: 18px;
+      margin-left: 5px;
+  }
+  .pc input{
+    outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      text-align: center;
+      background: none;
+      color: green;
+     
+  }
+ .svt{
+    display: flex;
+    margin-left:80px;
+    margin-top: 20px;
+  }
+  .svt p{
+    color: greenyellow;
+      font-size: 18px;
+      margin-left: 5px;
+  }
+  .svt input{
+    outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      text-align: center;
+      background: none;
+      color: green;
+     
+  }
+  .ph{
+    display: flex;
+    margin-left:80px;
+    margin-top: 20px;
+  }
+  .ph p{
+    color: greenyellow;
+      font-size: 18px;
+      margin-left: 5px;
+  }
+  .ph input{
+    outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      text-align: center;
+      background: none;
+      color: green;
+     
+  }
+  .eng{
+    display: flex;
+    margin-left:80px;
+    margin-top: 20px;
+  }
+  .eng p{
+    color: greenyellow;
+      font-size: 18px;
+      margin-left: 5px;
+  }
+  .eng input{
+    outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      text-align: center;
+      background: none;
+      color: green;
+     
+  }
+     #resu{
+      font-size: 22px;
+      color: whitesmoke;
+      margin-top: 20px;
+      background: green;
+     
+    }
+  #res{
+    font-size: 22px;
+      color: whitesmoke;
+      margin-top: 20px;
+      background: green;
+     
+  }
+  #regio{
+    font-size: 22px;
+      color: whitesmoke;
+      margin-top: 20px;
+      background: green;
+     
+  }
+  .sl{
+    text-decoration: none;
+    margin-left: 30px;
+    color: green;
+    border-bottom: 1px solid green;
+    
+  }
+  .ss{
+    text-decoration: none;
+    margin-left: 30px;
+    color: black;
+    border-bottom: 1px solid black;
+    
+  }
+  
+  .footer{
+    background:white;
+    margin-top: 10px;
+    display: flex;
+
+  }
+  .footer a{
+    text-decoration: none;
+    margin-left: 14px;
+    color: black;
+  }
+  .footer a span{
+  color: green;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  </style>
+</head>
+
+<body>
+    
+
+  <div class="header">
+   
+    <div class="container">
+          <div class="icon">
+        <div class="barr"></div>
+           <div class="bar"></div>
+              <div class="barr"></div>
+        <ul>
+          <li><a href="#ng">حساب النقطة الإجمالية</a></li>
+          <li><a href="#np">pc نقطة الإمتحان الوطني</a></li>
+          <li><a href="#ns">svtنقطة الإمتحان الوطني</a></li>
+          <li><a href="#nr">نقطة الإمتحان الجهوي</a></li>
+         
+        </ul>
+      </div>
+    </div>
+   
+    <div class="sc">
+    <a href="indix.html" class="sl">علوم</a>
+    <a href="indix1.html" class="ss">آدب</a>
+    </div>
+     <h3>النجاح</h3>
+  </div>
+  <div class="service" id="ng">
+    
+  <form class="title">
+    <a href="">حساب النقطة الإجمالية</a>
+  </form>
+  <div class="result" id="result">
+    
+  </div>
+  
+  <div  class="content">
+
+
+<div class="cycle">
+  <p>نقطة المراقبة المستمرة
+  </p>
+  
+  <input type="number"  id="note1">
+  
+</div>
+<div class="cycle">
+  <p>نقطة الإمتحان الجهوي</p>
+  <input type="number" id="note2">
+
+</div>
+<div class="cycle">
+  <p> نقطة الإمتحان الوطني </p>
+  <input type="number" id="note3">
+
+</div>
+<div class="btn">
+<button onclick="note()" >إحسب</button>
+  
+  </div>
+    </div>
+    <div class="bac" id="np">
+      <a href="">pc نقطة الإمتحان الوطني </a>
+        <div class="result" id="resu">
+    
+  </div>
+      <div class="math">
+        
+        <input type="number" name="" id="nt1">
+       <p>الرياضيات</p>
+      </div>
+      <div class="pc">
+        
+                <input type="number" name="" id="nt2">
+               <p>الفزياء</p>
+      </div>
+      <div class="svt">
+        
+        <input type="number" name="" id="nt3">
+        <p>ع.ح.أ</p>
+      </div>
+     <div class="ph">
+       
+               <input type="number" name="" id="nt4">
+               <p>الفلسفة</p>
+     </div>
+     <div class="eng">
+       
+        <input type="number" name="" id="nt5">
+        <p> الإنجليزية</p>
+     </div>
+     
+       <button onclick="ntn()">إحسب</button>
+       
+    
+    </div>
+      <div class="bac" id="ns">
+      <a href=""> svt نقطة الإمتحان الوطني</a>
+        <div class="result" id="res">
+    
+  </div>
+      <div class="math">
+        
+        <input type="number" name="" id="n1">
+       <p>الرياضيات</p>
+      </div>
+      <div class="pc">
+        
+                <input type="number" name="" id="n2">
+               <p>الفزياء</p>
+      </div>
+      <div class="svt">
+        
+        <input type="number" name="" id="n3">
+        <p>ع.ح.أ</p>
+      </div>
+     <div class="ph">
+       
+               <input type="number" name="" id="n4">
+               <p>الفلسفة</p>
+     </div>
+     <div class="eng">
+       
+        <input type="number" name="" id="n5">
+        <p> الإنجليزية</p>
+     </div>
+     
+       <button onclick="svt()">إحسب</button>
+       
+    
+    </div>
+          
+     <div class="bac" id="nr">
+      <a href="">نقطة الإمتحان الجهوي</a>
+        <div class="result" id="regio">
+    
+  </div>
+      <div class="math">
+        
+        <input type="number" name="" id="r1">
+       <p>الفرنسية</p>
+      </div>
+      
+        
+
+      <div class="pc">
+        
+                <input type="number" name="" id="r2">
+               <p>العربية</p>
+      </div>
+      <div class="svt">
+        
+        <input type="number" name="" id="r3">
+        <p>التاريخ الجغرافية</p>
+      </div>
+     <div class="ph">
+       
+               <input type="number" name="" id="r4">
+               <p>التربية إسلامية</p>
+     </div>
+     
+     
+       <button onclick="reg()">إحسب</button>
+       
+    
+    </div>
+          </div>
+   <div class="footer">
+     <a href="">télé: <span>0671870811</span></a>
+     <a href="">Gmail: <span>mrifi703@gmail.com</span></a>
+
+   </div>
+      </div>
+<script src="main.js"></script>
+</body>
+
+</html>
